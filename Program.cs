@@ -1,8 +1,8 @@
 ﻿using Raylib_cs;
 
 static class Game {
-    const int Width = 600;
-    const int Height = 600;
+    public const int Width = 600;
+    public const int Height = 600;
     const string Title = "Device Selector";
 
     const int TargetFPS = 60;
@@ -24,6 +24,9 @@ static class Game {
 
     static void Render() {
         Raylib.BeginDrawing();
+            SlotManager.Render();
+
+
             Raylib.DrawFPS(0,0);
         Raylib.EndDrawing();
     }
